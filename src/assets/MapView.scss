@@ -1,0 +1,67 @@
+.map-mobile{
+  left: 30% !important;//左侧UI交互栏留出宽度
+  width: calc(100% - 30%) !important;//计算剩余宽度
+}
+.map-wrapper {
+  position: absolute;
+  top: 0;
+  left: 344px;//左侧UI交互栏留出宽度
+  width: calc(100% - 344px);//计算剩余宽度
+  height: 100%;
+  z-index: 1;
+}
+.add-marker {
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 5%;
+  left: calc(50% + (344px / 2)); // 补偿左侧栏的一半宽度
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  font-size: 16px;
+  text-align: center;
+  background: #46464c;
+  color: #d7d7d9;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  &:hover {
+    background: #eac27e;
+    color: #222;
+  }
+  .add-marker-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
+  }
+}
+.addMarker-tips{
+  position: absolute;
+  top: 10%;
+  left: calc(50% + (344px / 2)); // 补偿左侧栏的一半宽度
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  font-size: 16px;
+  color: #d7d7d9;
+  background: #46464c;
+  padding: 8px 16px;
+  border-radius: 4px;
+  .close-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 2px;
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    &:hover {
+      color: #222;
+    }
+  }
+}
